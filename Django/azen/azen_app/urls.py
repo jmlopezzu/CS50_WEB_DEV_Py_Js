@@ -1,8 +1,11 @@
 from django.urls import path
+
 from . import views
 
 urlpatterns = [
   path("", views.index, name="index"),
-  path("JoseM", views.JoseM, name="JoseM")
+  path("<str:name>", views.greet, name="greet"),
+  path("JoseM", views.JoseM, name="JoseM"),
+  path("azen", views.azen, name="azen")
 ]
 
